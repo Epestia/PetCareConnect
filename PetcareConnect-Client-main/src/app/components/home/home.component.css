@@ -1,0 +1,99 @@
+/* Reset CSS pour normaliser les styles entre les navigateurs */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #0e0606;
+}
+.container {
+    max-width: 80%; 
+    margin: 0 auto;
+    padding: 2%; 
+}
+
+
+
+.inverser-horizontalement {
+    display: inline-block;
+    transform: scaleX(-1);
+    width: 50%;
+    height: auto;
+}
+
+.inverser-horizontalement2 {
+    display: block;
+    clear: both;
+    width: 50%;
+    height: auto;
+}
+
+.text-container {
+    width: 51%; /* 51% de la largeur de son contenant */
+    font-size: 100%; /* Taille de police en fonction de la largeur de l'écran */
+    margin-right: 3.5%;
+    padding: 2%; /* 2% de la largeur de l'écran ou une valeur en pixels si nécessaire */
+    background-color: #fff;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Ombre en fonction de la largeur de l'écran */
+    border-radius: 0.5vw; /* Rayon des coins en fonction de la largeur de l'écran */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    white-space: pre-line;
+    text-align: justify;
+    top: 77%
+}
+
+.donation-button {
+    background-color: #1d13aa;
+    color: white;
+    border: none;
+    padding: 1% 2%; /* Remplacez par des valeurs en pourcentage adaptées à votre mise en page */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%; /* Taille de police en fonction de la largeur de l'écran */
+    margin: 0.4% 0.2%; /* Marge en pourcentage adaptée */
+    cursor: pointer;
+    border-radius: 0.5vw; /* Rayon des coins en fonction de la largeur de l'écran */
+}
+
+.text-container2 {
+    width: 50%;
+    font-size: 100%; 
+    padding: 2%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5vw; 
+    position: absolute;
+    top: 42%;
+    left: 3.5%;
+    white-space: pre-line;
+    text-align: justify;
+}
+
+
+.image-droite {
+    float: right;
+    width: 50%;
+    height: auto;
+}
+
+.text-container3 {
+    width: 51%;
+    font-size: 100%; 
+    margin-right: 3.5%;
+    padding: 2%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5vw; 
+    position: absolute;
+    top: 10%; /* Position en haut */
+    right: 0; /* Position à droite */
+    white-space: pre-line;
+    text-align: justify;
+}

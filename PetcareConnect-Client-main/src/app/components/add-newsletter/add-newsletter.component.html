@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Ajouter une Newsletter</h2>
+  
+    <form (ngSubmit)="onSubmit()" #newsletterForm="ngForm">
+      <label for="titre">Titre :</label>
+      <input type="text" id="titre" name="titre" [(ngModel)]="titre" required>
+  
+      <label for="commentaire">Commentaire :</label>
+      <textarea id="commentaire" name="commentaire" rows="4" [(ngModel)]="commentaire"></textarea>
+  
+      <label for="image">Image :</label>
+      <input type="file" id="image" name="image" (change)="onFileChange($event)" accept="image/*">
+  
+      <button type="submit" [disabled]="!newsletterForm.valid">Ajouter Newsletter</button>
+    </form>
+  </div>
+  

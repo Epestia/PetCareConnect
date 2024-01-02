@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>S'inscrire</title>
+</head>
+<body>
+
+
+<div>
+
+  <form (ngSubmit)="onSubmit()">
+    <h2>Formulaire d'inscription</h2>
+    <div>
+      <label for="utilisateurId">Utilisateur ID:</label>
+      <input type="text" id="utilisateurId" name="utilisateurId" [(ngModel)]="utilisateurId" required>
+    </div>
+
+    <div>
+      <label for="pseudoUtilisateur">Pseudo Utilisateur:</label>
+      <input type="text" id="pseudoUtilisateur" name="pseudoUtilisateur" [(ngModel)]="pseudoUtilisateur" required>
+    </div>
+
+    <div>
+      <label for="prenomUtilisateur">Prénom Utilisateur:</label>
+      <input type="text" id="prenomUtilisateur" name="prenomUtilisateur" [(ngModel)]="prenomUtilisateur">
+    </div>
+
+    <div>
+      <label for="nomUtilisateur">Nom Utilisateur:</label>
+      <input type="text" id="nomUtilisateur" name="nomUtilisateur" [(ngModel)]="nomUtilisateur">
+    </div>
+
+    <div>
+      <label for="adresseMail">Adresse Mail:</label>
+      <input type="email" id="adresseMail" name="adresseMail" [(ngModel)]="adresseMail" required>
+    </div>
+
+    <div>
+      <label for="motsDePasse">Mot de Passe:</label>
+      <input type="password" id="motsDePasse" name="motsDePasse" [(ngModel)]="motsDePasse" required>
+    </div>
+
+    <div>
+      <label for="role">Choisir le rôle:</label>
+      <select id="role" name="role" [(ngModel)]="selectedRole" required>
+        <option value="client">Client</option>
+        <option value="veterinaire">Vétérinaire</option>
+      </select>
+    </div>
+
+    <div *ngIf="selectedRole === 'veterinaire'">
+      <div>
+        <label for="numeroVet">Numéro d'ordre vétérinaire:</label>
+        <input type="text" id="numeroVet" name="numeroVet" [(ngModel)]="numeroVet" required>
+      </div>
+    </div>
+
+    <button type="submit">Se Connecter</button>
+
+
+      <p class="signin-link">Vous avez déjà un compte ? <a routerLink="../login">Connectez-vous</a></p>
+    </form>
+  </div>
+
+</body>
+</html>

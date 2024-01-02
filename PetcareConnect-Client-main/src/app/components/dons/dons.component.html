@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Formulaire de Dons</h2>
+    <p>Faites un don pour soutenir notre clinique vétérinaire.</p>
+    
+    <form action="" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom"  name="nom" [(ngModel)]="nom" required>
+
+        <label for="nom">Prenom :</label>
+        <input type="text" id="preNom" [(ngModel)]="preNom" name="preNom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+
+        <label for="montant">Montant du don :</label>
+        <input type="number" id="montant" [(ngModel)]="montant" name="montant" required min="1">
+
+        <label for="commentaire">Commentaire :</label>
+        <textarea id="commentaire" name="commentaire" rows="4"></textarea>
+
+        <button type="submit">Faire un don</button>
+    </form>
+</div>

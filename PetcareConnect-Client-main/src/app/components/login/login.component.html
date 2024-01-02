@@ -1,0 +1,34 @@
+<form (ngSubmit)="login()">
+    <h2>Se connecter</h2>
+    <div>
+      <label for="pseudoUtilisateur">Pseudo Utilisateur:</label>
+      <input type="text" id="pseudoUtilisateur" name="pseudoUtilisateur" [(ngModel)]="pseudoUtilisateur" required>
+    </div>
+    
+    <div>
+    <label for="password">Mot de passe:</label>
+    <input type="password" id="password" required [(ngModel)]="password" name="password">
+    </div>
+
+    <div>
+      <label for="role">Choisir le rôle:</label>
+      <select id="role" name="role" [(ngModel)]="selectedRole" required>
+        <option value="client">Client</option>
+        <option value="veterinaire">Vétérinaire</option>
+      </select>
+    </div>
+
+    <div *ngIf="selectedRole === 'veterinaire'">
+      <div>
+        <label for="numeroVet">Numéro d'ordre vétérinaire:</label>
+        <input type="text" id="numeroVet" name="numeroVet" [(ngModel)]="numeroVet" required>
+      </div>
+    </div>
+
+    <div>
+    <button type="submit">Se connecter</button>
+    <p class="signin-link">Vous n'avez pas de compte ? <a href="../signUp">S'inscrire </a></p>
+    </div>
+
+  </form>
+  
